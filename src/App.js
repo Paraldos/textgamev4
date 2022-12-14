@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+
+import Scene from "./components/Scene/Scene";
 
 function App() {
+  const [currentScene, setCurrentScene] = useState("room1");
+
+  const content = {
+    room1: [
+      { text: "This is Room 1", type: "h1" },
+      { text: "This is some paragraph", type: "p" },
+      { text: "This is some paragraph", type: "p" },
+      { text: "This is some button", type: "button" },
+      { text: "This is some button", type: "button" },
+      { text: "This is some button", type: "button" },
+    ],
+    room2: [
+      { text: "This is Room 2", type: "h1" },
+      { text: "This is some paragraph", type: "p" },
+      { text: "This is some paragraph", type: "p" },
+      { text: "This is some button", type: "button" },
+      { text: "This is some button", type: "button" },
+      { text: "This is some button", type: "button" },
+    ],
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Scene scene={content[currentScene]}></Scene>
     </div>
   );
 }
