@@ -1,7 +1,11 @@
 import React from "react";
 
-export default function Block({ block }) {
-  if (block.type === "h1") return <h1>{block.text}</h1>;
-  if (block.type === "p") return <p>{block.text}</p>;
-  if (block.type === "button") return <button>{block.text}</button>;
+export default function Block({ blockInfo, onBlockClick }) {
+  const txt = blockInfo.text;
+
+  const onClickHandler = () => onBlockClick(blockInfo.changeSceneTarget);
+
+  if (blockInfo.type === "h1") return <h1>{txt}</h1>;
+  if (blockInfo.type === "p") return <p>{txt}</p>;
+  if (blockInfo.type === "button") return <button onClick={onClickHandler}>{txt}</button>;
 }

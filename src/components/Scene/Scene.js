@@ -2,11 +2,13 @@ import React from "react";
 import "./Scene.css";
 import Block from "./Block";
 
-export default function Scene({ scene }) {
+export default function Scene({ sceneInfo, onSceneClick }) {
+  const blockClickHandler = (target) => onSceneClick(target);
+
   return (
     <div className="scene">
-      {scene.map((block) => (
-        <Block block={block} />
+      {sceneInfo.map((block) => (
+        <Block onBlockClick={blockClickHandler} blockInfo={block} />
       ))}
     </div>
   );

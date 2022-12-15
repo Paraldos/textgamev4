@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+
+:root {
+  --c1: #ecfffb;
+  --c2: #858f97;
+  --c3: #576373;
+  --c4: #323859;
+  --c5: #0c0421;
+  font-size: 20px;
+}
+
+* {
+  background-color: var(--c4);
+  color: var(--c1);
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: 1px solid var(--c2);
+  color: var(--c2);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: 13.7px 13.7px 8.6px -8px rgba(0, 0, 0, 0.07),
+    16.4px 16.4px 15.7px -8px rgba(0, 0, 0, 0.05), 19.3px 19.3px 25.5px -8px rgba(0, 0, 0, 0.042),
+    26px 26px 41.5px -8px rgba(0, 0, 0, 0.035), 42px 42px 68.1px -8px rgba(0, 0, 0, 0.028),
+    100px 100px 113px -8px rgba(0, 0, 0, 0.019);
+}
+
+button:hover {
+  border: 1px solid var(--c1);
+  color: var(--c1);
+}
