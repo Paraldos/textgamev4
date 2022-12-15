@@ -1,44 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
 
-:root {
-  --c1: #ecfffb;
-  --c2: #858f97;
-  --c3: #576373;
-  --c4: #323859;
-  --c5: #0c0421;
-  font-size: 20px;
-}
-
 * {
-  background-color: var(--c4);
-  color: var(--c1);
-  font-size: 1rem;
+  font-family: "Kanit", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kanit", sans-serif;
+}
+
+:root {
+  --c1: #fefefe;
+  --c2: #c2c2c2;
+  --c3: #404258;
+  --c4: #282a3a;
+  --navHeight: 60px;
+  font-size: 20px;
+  background: var(--c4);
+  color: var(--c1);
 }
 
 h1 {
   font-size: 2rem;
+  margin: 0;
+}
+h1::before {
+  content: ">> ";
 }
 
 p {
   margin: 0;
+  margin-top: 1rem;
 }
 
 button {
-  border: 1px solid var(--c2);
+  border: 2px solid var(--c2);
+  border-radius: 10px;
   color: var(--c2);
   padding: 0.5rem;
   margin-top: 1rem;
-  box-shadow: 13.7px 13.7px 8.6px -8px rgba(0, 0, 0, 0.07),
-    16.4px 16.4px 15.7px -8px rgba(0, 0, 0, 0.05), 19.3px 19.3px 25.5px -8px rgba(0, 0, 0, 0.042),
-    26px 26px 41.5px -8px rgba(0, 0, 0, 0.035), 42px 42px 68.1px -8px rgba(0, 0, 0, 0.028),
-    100px 100px 113px -8px rgba(0, 0, 0, 0.019);
+  background: rgba(255, 255, 255, 0);
+  text-align: left;
+  font-size: 1rem;
 }
 
 button:hover {
-  border: 1px solid var(--c1);
+  border-color: var(--c1);
   color: var(--c1);
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--navHeight);
+  padding: 0 50px;
+
+  background: var(--c3);
+  border-bottom: 2px solid var(--c2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.Navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.Navbar ul li {
+  padding: 0 20px;
+}
+
+.Scene {
+  max-width: 50%;
+  min-height: 100vh;
+  margin: auto;
+  padding: 1rem;
+  padding-top: calc(1rem + var(--navHeight));
+  display: flex;
+  flex-direction: column;
 }
