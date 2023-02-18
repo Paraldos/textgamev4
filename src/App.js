@@ -21,9 +21,15 @@ function App() {
       },
 
       { text: "Go to Room 2", type: "button", changeSceneTarget: "room2" },
+      { text: "Go to Room 3", type: "button", changeSceneTarget: "room3" },
     ],
     room2: [
       { text: "This is Room 2", type: "h1" },
+      { text: "This is some paragraph", type: "p" },
+      { text: "Go to Room 1", type: "button", changeSceneTarget: "room1" },
+    ],
+    room3: [
+      { text: "This is Room 3", type: "h1" },
       { text: "This is some paragraph", type: "p" },
       { text: "Go to Room 1", type: "button", changeSceneTarget: "room1" },
     ],
@@ -32,7 +38,10 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <Scene onSceneClick={sceneClickHandler} sceneInfo={content[currentScene]}></Scene>
+      <Scene
+        onSceneClick={sceneClickHandler}
+        sceneInfo={content[currentScene]}
+      ></Scene>
     </div>
   );
 }
